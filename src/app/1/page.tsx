@@ -1,4 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+import { FaXTwitter } from "react-icons/fa6";
+import { FaPinterest, FaLinkedin, FaInstagram } from "react-icons/fa";
+
 export default function One() {
   return (
     <section className="flex flex-col items-center  rounded-2xl shadow-lg bg-white h-[32rem] w-[32rem] text-black">
@@ -39,34 +42,39 @@ export default function One() {
         <img
           src="https://images.unsplash.com/photo-1668766418520-04797d637e78?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="profile"
-          className="rounded-full max-h-8"
+          className="rounded-full max-h-8 z-20"
         />
       </header>
 
-      <div className="pt-20 flex flex-col justify-center items-center ">
+      <div className="pt-24 flex flex-col justify-center items-center ">
         <p className="text-2xl">Lorem Ipsum</p>
         <span className="text-sm text-black/60">@loremipsum</span>
       </div>
 
-      <div></div>
+      <div className="flex gap-4 px-12 pt-8">
+        <FaXTwitter className="hover:cursor-pointer" />
+        <FaLinkedin className="hover:cursor-pointer" />
+        <FaPinterest className="hover:cursor-pointer" />
+        <FaInstagram className="hover:cursor-pointer" />
+      </div>
 
-      <div className="px-12 text-center tracking-tighter">
+      <div className="px-12 text-center tracking-tighter py-8">
         <p>
           Crafting brand and communication stratgies, creating visual designs,
           leading art direction and capturing portraits through photography.
         </p>
       </div>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4 mt-auto py-12">
         <a
           href=""
-          className="px-8 py-2 bg-orange-300 rounded-2xl text-xs font-bold flex items-center"
+          className="px-12 py-3 bg-orange-300 rounded-2xl text-sm font-bold flex items-center"
         >
           Follow
         </a>
         <a
           href=""
-          className="px-8 py-2 bg-white border-2 border-orange-300 rounded-2xl text-xs font-bold flex items-center"
+          className="px-8 py-2 bg-white border-2 border-orange-300 rounded-2xl text-sm font-bold flex items-center"
         >
           Message
         </a>
