@@ -1,6 +1,11 @@
 import React from "react";
 
-const MobilePhone = ({ children }: any) => {
+interface MobilePhoneProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const MobilePhone = ({ children, className }: MobilePhoneProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="mx-auto mt-[170px] p-[10px] pb-[30px] w-[350px] h-[600px] shadow-lg rounded-[30px] relative">
@@ -8,7 +13,9 @@ const MobilePhone = ({ children }: any) => {
           <span className="block w-[60px] h-[5px] bg-[#d2d2d2] mx-auto mt-[5px] rounded-[20px]"></span>
         </div>
 
-        <div className="w-full h-full bg-[#f2f2f2] rounded-[30px] overflow-y-auto px-4 py-4 pt-12">
+        <div
+          className={`w-full h-full bg-[#f2f2f2] rounded-[30px] overflow-y-auto ${className}`}
+        >
           {children}
         </div>
       </div>

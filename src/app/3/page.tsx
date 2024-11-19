@@ -1,3 +1,4 @@
+// icons
 import { FaChevronRight } from "react-icons/fa6";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { FaEnvelope } from "react-icons/fa";
@@ -6,6 +7,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FaQuestion } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
+// mockup
+import MobilePhone from "@/components/phone-mockup";
 
 const menuData = [
   { name: "Personal Data", icon: <BsFillPeopleFill /> },
@@ -22,43 +25,52 @@ const optionsData = [
 
 export default function Page() {
   return (
-    <section className="">
-      <div className="flex gap-4">
-        <div className="p-2 w-10 border-pink-200 border-2 rounded-lg"></div>
-        <div>
-          <p className="font-bold">Donald Duck</p>
-          <p className="tracking-wider">Astrologist</p>
-        </div>
-      </div>
-
-      <div className="border-[1px] border-gray-400 white my-4"></div>
-
-      {menuData.map((item) => {
-        return (
-          <div className="flex justify-between items-center py-2">
-            <div className="flex items-center gap-2">
-              {item.icon}
-              {item.name}
+    <>
+      <MobilePhone className="px-6 pt-12">
+        <section className="text-black">
+          <div className="flex gap-4">
+            <div className="w-12 border-gray-800 border-2 rounded-lg overflow-hidden">
+              <img
+                src="https://thispersondoesnotexist.com/"
+                className="object-cover"
+              ></img>
             </div>
-
-            <FaChevronRight />
-          </div>
-        );
-      })}
-
-      <div className="border-[1px] border-gray-400 white my-4"></div>
-
-      {optionsData.map((item) => {
-        return (
-          <div className="flex justify-between items-center py-2">
-            <div className="flex items-center gap-2">
-              {item.icon}
-              {item.name}
+            <div>
+              <p className="font-bold">Donald Duck</p>
+              <p className="tracking-wider">Astrologist</p>
             </div>
-            <FaChevronRight />
           </div>
-        );
-      })}
-    </section>
+
+          <div className="border-[1px] border-gray-800 white my-4"></div>
+
+          {menuData.map((item) => {
+            return (
+              <div className="flex justify-between items-center py-2 cursor-pointer hover:underline">
+                <div className="flex items-center gap-2">
+                  {item.icon}
+                  {item.name}
+                </div>
+
+                <FaChevronRight />
+              </div>
+            );
+          })}
+
+          <div className="border-[1px] border-gray-800 white my-4"></div>
+
+          {optionsData.map((item) => {
+            return (
+              <div className="flex justify-between items-center py-2 cursor-pointer hover:underline">
+                <div className="flex items-center gap-2">
+                  {item.icon}
+                  {item.name}
+                </div>
+                <FaChevronRight />
+              </div>
+            );
+          })}
+        </section>
+      </MobilePhone>
+    </>
   );
 }
